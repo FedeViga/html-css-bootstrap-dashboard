@@ -1,0 +1,21 @@
+/***********************************
+    TEST
+***********************************/
+.test, .test * {
+    background-color: rgba(255, 0, 0, 0.5);
+    border: 2px dashed red;
+}
+
+aside {
+    width: 150px;
+}
+/***********************************
+    FINE TEST
+***********************************/
+#my_main-container {
+    height: calc(100vh - 56px);
+}
+
+main {
+    width: calc(100vw - 150px);
+}
