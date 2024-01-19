@@ -13,8 +13,25 @@
     MAIN CONTAINER
 ***********************************/
 #my_main-container {
-    height: calc(100vh - 72px);
+    height: calc(100vh - 70px);
 }
+/* navbar */
+nav {
+    height: 70px;
+}
+
+.logo-small {
+    height: 38px;
+}
+
+.my_nav-link-dropdown::after {
+    display: none;
+}
+
+.fa-bell {
+    color: #FF8F00;
+}
+/* fine navbar */
 
 /* aside */
 aside {
