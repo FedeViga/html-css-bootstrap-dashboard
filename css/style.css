@@ -5,17 +5,33 @@
     background-color: rgba(255, 0, 0, 0.5);
     border: 2px dashed red;
 }
-
-aside {
-    width: 150px;
-}
 /***********************************
     FINE TEST
 ***********************************/
+
+/***********************************
+    MAIN CONTAINER
+***********************************/
 #my_main-container {
-    height: calc(100vh - 56px);
+    height: calc(100vh - 72px);
 }
 
-main {
-    width: calc(100vw - 150px);
+/* aside */
+aside {
+    background-image: url(../img/sidebar-bg.png);
+    background-color: #051E34;
+    /* test */
+    width: 150px;
 }
+/* fine aside */
+
+/* header */
+header {
+    background-color: #1B72E8;
+    /* test */
+    height: 123px;
+}
+/* fine header */
+/***********************************
+    FINE MAIN CONTAINER
+***********************************/
