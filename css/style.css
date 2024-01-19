@@ -37,8 +37,12 @@ nav {
 aside {
     background-image: url(../img/sidebar-bg.png);
     background-color: #051E34;
-    /* test */
-    width: 150px;
+    width: 68px;
+}
+
+.aside-button {
+    cursor: pointer;
+    transition: background-color .2s ease;
 }
 /* fine aside */
 
@@ -51,4 +55,20 @@ header {
 /* fine header */
 /***********************************
     FINE MAIN CONTAINER
+***********************************/
+
+/***********************************
+    MEDIA QUERY
+***********************************/
+@media screen and (min-width:992px) {
+    aside {
+        width: 150px;
+    }
+
+    .aside-button:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}
+/***********************************
+    FINE MEDIA QUERY
 ***********************************/
