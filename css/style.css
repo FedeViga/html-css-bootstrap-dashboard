@@ -8,7 +8,9 @@
 /***********************************
     FINE TEST
 ***********************************/
-
+body {
+    font-family: 'Roboto', sans-serif;
+}
 /***********************************
     MAIN CONTAINER
 ***********************************/
@@ -16,7 +18,7 @@
     height: calc(100vh - 70px);
 }
 /* navbar */
-nav {
+.my_navbar {
     height: 70px;
 }
 
@@ -47,12 +49,11 @@ aside {
 /* fine aside */
 
 /* header */
-header {
-    background-color: #1B72E8;
-    /* test */
-    height: 123px;
+.label {
+    background-color: #165BBA;
 }
 /* fine header */
+
 /***********************************
     FINE MAIN CONTAINER
 ***********************************/
