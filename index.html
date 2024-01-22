@@ -35,7 +35,7 @@
             <img class="img-fluid d-none d-lg-block pe-2" src="./img/logo.svg" alt="logo">
             <!-- barra search -->
             <form class="d-flex w-100" role="search">
-                <input class="form-control mx-2 border-start-0" type="search"
+                <input class="form-control my_searchbar mx-2 border-start-0" type="search"
                     placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
             </form>
             <!-- lista link collassabili -->
@@ -150,7 +150,7 @@
             </header>
 
             <!-- main content -->
-            <div class="main-content pt-3">
+            <div class="main-content pt-3 bg-light">
 
                 <div class="row mx-0">
 
@@ -161,10 +161,114 @@
                                 Prossime Classi
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <table class="table table-hover">
+                                    <thead>
+                                      <tr>
+                                        <td class="text-secondary">Nome</td>
+                                        <td class="text-center d-none d-md-table-cell text-secondary">Data Inizio</td>
+                                        <td class="text-center d-none d-md-table-cell text-secondary">ROI</td>
+                                        <td class="text-center text-secondary">Stato</td>
+                                        <td class="text-center text-secondary">Azioni</td>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                            <td><img class="me-2" src="./img/class-avatar.jpg">Classe 75</td>
+                                            <td class="text-center d-none d-md-table-cell">15 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <div class="table-label d-inline-block bg-success text-white px-2 rounded-3">Done</div>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img class="me-2" src="./img/class-avatar.jpg">Classe 76</td>
+                                            <td class="text-center d-none d-md-table-cell">16 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <div class="table-label d-inline-block bg-success text-white px-2 rounded-3">Done</div>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img class="me-2" src="./img/class-avatar.jpg">Classe 77</td>
+                                            <td class="text-center d-none d-md-table-cell">17 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <div class="table-label d-inline-block bg-warning text-white px-2 rounded-3">process</div>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img class="me-2" src="./img/class-avatar.jpg">Classe 78</td>
+                                            <td class="text-center d-none d-md-table-cell">18 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <div class="table-label d-inline-block bg-success text-white px-2 rounded-3">Done</div>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img class="me-2" src="./img/class-avatar.jpg">Classe 79</td>
+                                            <td class="text-center d-none d-md-table-cell">19 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <div class="table-label d-inline-block bg-danger text-white px-2 rounded-3">failed</div>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img class="me-2" src="./img/class-avatar.jpg">Classe 80</td>
+                                            <td class="text-center d-none d-md-table-cell">20 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <div class="table-label d-inline-block bg-success text-white px-2 rounded-3">Done</div>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img class="me-2" src="./img/class-avatar.jpg">Classe 81</td>
+                                            <td class="text-center d-none d-md-table-cell">21 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <div class="table-label d-inline-block bg-danger text-white px-2 rounded-3">failed</div>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img class="me-2" src="./img/class-avatar.jpg">Classe 82</td>
+                                            <td class="text-center d-none d-md-table-cell">22 Feb 2021</td>
+                                            <td class="text-center d-none d-md-table-cell">20%</td>
+                                            <td class="text-center">
+                                                <div class="table-label d-inline-block bg-success text-white px-2 rounded-3">Done</div>
+                                            </td>
+                                            <td class="text-center">
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                            </td>
+                                        </tr>
+                                  </table>
                             </div>
                         </div>
                         <div class="card mb-3">
@@ -172,10 +276,38 @@
                                 F.A.Q.
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                          Come aggiungere un nuovo studente?
+                                        </button>
+                                      </h2>
+                                      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">Clicca sul "+" in alto nella sezione blu</div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                          Come posso accedere alle informazioni del mio account?
+                                        </button>
+                                      </h2>
+                                      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">Clicca sull'icona della campanella</div>
+                                      </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                          Posso usare questa dashboard da mobile?
+                                        </button>
+                                      </h2>
+                                      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aut illum alias hic, praesentium quasi libero, repudiandae eveniet debitis, mollitia iure at ipsum magni vel error magnam impedit corporis aliquam.</div>
+                                      </div>
+                                    </div>
+                                  </div>
                             </div>
                         </div>
                     
@@ -185,28 +317,44 @@
 
                         <div class="card mb-3">
                             <div class="card-header fs-2">
-                                Todo
+                                To-do
                             </div>
                             <div class="card-body">
                                 <div class="card">
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">
-                                            <input type="checkbox" class="align-middle me-2">Kickoff nuove classi
+                                        <li class="list-group-item d-flex">
+                                            <input type="checkbox" class="me-2">
+                                            <div>Kickoff nuove classi</div>
                                         </li>
-                                        <li class="list-group-item"><input type="checkbox"
-                                                class="align-middle me-2">Lezione su Bootstrap 5 in classe #118</li>
-                                        <li class="list-group-item"><input type="checkbox"
-                                                class="align-middle me-2">Controllare username github studenti</li>
+                                        <li class="list-group-item d-flex">
+                                            <input type="checkbox" class="me-2">
+                                            <div>Lezione su Bootstrap 5 in classe #118</div>
+                                        </li>
+                                        <li class="list-group-item d-flex">
+                                            <input type="checkbox" class="me-2">
+                                            <div>Controllare username github studenti</div>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div class="card mb-3">
                             <div class="card-body">
-                                <h5 class="card-title">Special title treatment</h5>
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <div class="card">
+                                    <ul class="list-group list-group-flush">
+                                      <li class="list-group-item border-bottom-0">
+                                        <img class="img-fluid" src="./img/stats.jpeg" alt="grafico">
+                                      </li>
+                                      <li class="list-group-item">
+                                        <h5 class="card-title">Utenti Attivi</h5>
+                                        <p>Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                                      </li>
+                                      <li class="list-group-item">Gennaio: 1200</li>
+                                      <li class="list-group-item">Febbraio: 800</li>
+                                      <li class="list-group-item">Marzo: 1500</li>
+                                      <li class="list-group-item py-3"><a href="#">Visualizza report approfondito</a></li>
+                                    </ul>
+                                  </div>
                             </div>
                         </div>
 
