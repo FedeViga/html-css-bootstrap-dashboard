@@ -1,26 +1,20 @@
-/***********************************
-    TEST
-***********************************/
-.test, .test * {
-    background-color: rgba(255, 0, 0, 0.5);
-    border: 2px dashed red;
-}
-/***********************************
-    FINE TEST
-***********************************/
+/* font */
 body {
     font-family: 'Roboto', sans-serif;
 }
-/***********************************
-    MAIN CONTAINER
-***********************************/
+/* fine font */
+
+/* main container */
 #my_main-container {
     height: calc(100vh - 70px);
 }
+/* fine main container */
+
 /* navbar */
 .my_navbar {
     height: 70px;
 }
+
 .my_searchbar {
     background-color: #E5E5E5;
 }
@@ -55,6 +49,7 @@ aside {
 main {
     width: calc(100vw - 68px);
 }
+
 .label {
     background-color: #165BBA;
 }
@@ -68,13 +63,8 @@ main {
     width: 30px;
 }
 /* fine main */
-/***********************************
-    FINE MAIN CONTAINER
-***********************************/
 
-/***********************************
-    MEDIA QUERY
-***********************************/
+/* media query */
 @media screen and (min-width: 992px) {
     aside {
         width: 150px;
@@ -89,6 +79,4 @@ main {
         width: 50% !important;
     }
 }
-/***********************************
-    FINE MEDIA QUERY
-***********************************/
+/* fine media query */

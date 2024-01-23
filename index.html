@@ -28,15 +28,18 @@
 <body>
 
     <!-- navbar width 100vw-->
-    <nav class="my_navbar navbar navbar-expand-lg bg-body-tertiary py-3">
+    <nav class="my_navbar navbar navbar-expand-lg bg-white py-3">
         <div class="container-fluid flex-nowrap bg-white">
             <!-- logo mobile e desktop -->
-            <img class="logo-small img-fluid d-lg-none" src="./img/mobile-logo.png" alt="logo mobile">
+            <img class="logo-small img-fluid d-lg-none ps-1 pe-3" src="./img/mobile-logo.png" alt="logo mobile">
             <img class="img-fluid d-none d-lg-block pe-2" src="./img/logo.svg" alt="logo">
             <!-- barra search -->
             <form class="d-flex w-100" role="search">
-                <input class="form-control my_searchbar mx-2 border-start-0" type="search"
-                    placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
+                <span class="my_searchbar input-group-text border-end-0 rounded-0 rounded-start" id="search-addon"><i
+                        class="fa-solid fa-magnifying-glass"></i></span>
+                <input class="my_searchbar form-control border-start-0 rounded-0 rounded-end" type="search"
+                    placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search"
+                    aria-describedby="search-addon">
             </form>
             <!-- lista link collassabili -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -98,7 +101,7 @@
         </aside>
 
         <!-- main -->
-        <main class="overflow-y-auto">
+        <main class="overflow-y-auto bg-light">
 
             <!-- header -->
             <header class="bg-primary text-white">
@@ -109,97 +112,103 @@
                         <div>
                             Nuovo Studente
                             <!-- bottone offcanvas -->
-                            <button type="button" class="btn btn-outline-light ms-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasForm" aria-controls="offcanvasForm"><i class="fa-solid fa-plus"></i></button>
+                            <button type="button" class="btn btn-outline-light ms-4" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasForm" aria-controls="offcanvasForm"><i
+                                    class="fa-solid fa-plus"></i></button>
                             <!-- offcanvas -->
-                            <div class="offcanvas offcanvas-end w-100 my_offcanvas" tabindex="-1" id="offcanvasForm" aria-labelledby="offcanvasForm">
+                            <div class="offcanvas offcanvas-end w-100 my_offcanvas" tabindex="-1" id="offcanvasForm"
+                                aria-labelledby="offcanvasForm">
                                 <div class="offcanvas-header">
-                                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Inserisci un nuovo studente</h5>
-                                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Inserisci un nuovo studente
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="offcanvas-body">
-                                  <form>
-                                    <div class="row g-3">
-                                        <div class="col-6 mb-3">
-                                            
-                                            <label for="first-name">Nome</label>
-                                          <input type="text" class="form-control" id="first-name">
-                                        </div>
+                                    <form>
+                                        <div class="row g-3">
+                                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
 
-                                        <div class="col-6 mb-3">
-                                            
-                                            <label for="last-name">Cognome</label>
-                                          <input type="text" class="form-control" id="last-name">
-                                        </div>
-
-                                        <div class="col-6">
-                                            <label>Email</label>
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text" id="basic-addon1">@</span>
-                                                <input type="text" class="form-control" aria-describedby="basic-addon1">
-                                              </div>
-                                        </div>
-                                          <div class="col-6">
-                                            <label for="inputPassword4">Password</label>
-                                            <input type="password" class="form-control" id="inputPassword4">
-                                          </div>
-
-                                          <div class="col-6">
-                                            <label>Conferma Email</label>
-                                            <div class="input-group mb-3">
-                                                <span class="input-group-text" id="basic-addon1">@</span>
-                                                <input type="text" class="form-control" aria-describedby="basic-addon1">
-                                              </div>
-                                        </div>
-                                          <div class="col-6">
-                                            <label for="inputPassword4">Conferma Password</label>
-                                            <input type="password" class="form-control" id="inputPassword4">
-                                        </div>
-
-                                        <div class="col-12">
-                                            <label for="inputAddress2" class="form-label">Indirizzo</label>
-                                            <input type="text" class="form-control" id="inputAddress2">
-                                          </div>
-                                          <div class="col-md-6">
-                                            <label for="inputCity" class="form-label">Città</label>
-                                            <input type="text" class="form-control" id="inputCity">
-                                          </div>
-                                          <div class="col-md-4">
-                                            <label for="inputState" class="form-label">Stato</label>
-                                            <select id="inputState" class="form-select">
-                                              <option selected>Scegli...</option>
-                                              <option>...</option>
-                                            </select>
-                                          </div>
-                                          <div class="col-md-2">
-                                            <label for="inputZip" class="form-label">CAP</label>
-                                            <input type="text" class="form-control" id="inputZip">
-                                          </div>
-
-                                          <div class="mb-3">
-                                            <label for="formFile" class="form-label">Scegli file</label>
-                                            <input class="form-control" type="file" id="formFile" placeholder="Nessun file selezionato">
-                                          </div>
-                                          <div class="col-12">
-                                            <div class="form-check">
-                                              <input class="form-check-input" type="checkbox" id="gridCheck">
-                                              <label class="form-check-label" for="gridCheck">
-                                                Seleziona per proseguire
-                                              </label>
+                                                <label for="first-name">Nome</label>
+                                                <input type="text" class="form-control" id="first-name">
                                             </div>
-                                          </div>
-                                          <div class="col-12">
-                                            <button type="submit" class="btn btn-primary">Salva</button>
-                                            <button type="button" class="btn btn-warning">Svuota</button>
-                                          </div>
 
+                                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
 
-                                    </div>
-                                        
+                                                <label for="last-name">Cognome</label>
+                                                <input type="text" class="form-control" id="last-name">
+                                            </div>
 
+                                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                                                <label>Email</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-text" id="email-addon1">@</span>
+                                                    <input type="email" class="form-control"
+                                                        aria-describedby="email-addon1">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                                                <label for="inputPassword1">Password</label>
+                                                <input type="password" class="form-control" id="inputPassword1">
+                                            </div>
 
-                                  </form>
+                                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                                                <label>Conferma Email</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-text" id="email-addon2">@</span>
+                                                    <input type="email" class="form-control"
+                                                        aria-describedby="email-addon2">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                                                <label for="inputPassword2">Conferma Password</label>
+                                                <input type="password" class="form-control" id="inputPassword2">
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label for="inputAddress1" class="form-label">Indirizzo</label>
+                                                <input type="text" class="form-control" id="inputAddress1">
+                                            </div>
+                                            <div class="col-12 col-sm-6 col-lg-12 col-xl-6">
+                                                <label for="inputCity" class="form-label">Città</label>
+                                                <input type="text" class="form-control" id="inputCity">
+                                            </div>
+                                            <div class="col-6 col-sm-4 col-lg-6 col-xl-4">
+                                                <label for="inputState" class="form-label">Stato</label>
+                                                <select id="inputState" class="form-select">
+                                                    <option selected>Scegli...</option>
+                                                    <option>France</option>
+                                                    <option>Germany</option>
+                                                    <option>Italy</option>
+                                                    <option>United States</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-6 col-sm-2 col-lg-6 col-xl-2">
+                                                <label for="inputZip" class="form-label">CAP</label>
+                                                <input type="text" class="form-control" id="inputZip">
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <label for="formFile" class="form-label">Scegli file</label>
+                                                <input class="form-control" type="file" id="formFile"
+                                                    placeholder="Nessun file selezionato">
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                    <label class="form-check-label" for="gridCheck">
+                                                        Seleziona per proseguire
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button type="submit" class="btn btn-primary">Salva</button>
+                                                <button type="reset" class="btn btn-warning">Svuota</button>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                     </div>
 
@@ -240,12 +249,12 @@
             </header>
 
             <!-- main content -->
-            <div class="main-content pt-3 bg-light">
+            <div class="main-content pt-3">
 
                 <div class="row mx-0">
 
                     <div class="col-12 col-lg-8">
-                    
+
                         <div class="card mb-3">
                             <div class="card-header fs-2">
                                 Prossime Classi
@@ -253,25 +262,30 @@
                             <div class="card-body">
                                 <table class="table table-hover">
                                     <thead>
-                                      <tr>
-                                        <td class="text-secondary">Nome</td>
-                                        <td class="text-center d-none d-md-table-cell text-secondary">Data Inizio</td>
-                                        <td class="text-center d-none d-md-table-cell text-secondary">ROI</td>
-                                        <td class="text-center text-secondary">Stato</td>
-                                        <td class="text-center text-secondary">Azioni</td>
-                                      </tr>
+                                        <tr>
+                                            <td class="text-secondary col-xxl-6">Nome</td>
+                                            <td class="text-center d-none d-md-table-cell text-secondary">Data Inizio
+                                            </td>
+                                            <td class="text-center d-none d-md-table-cell text-secondary">ROI</td>
+                                            <td class="text-center text-secondary">Stato</td>
+                                            <td class="text-center text-secondary">Azioni</td>
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                      <tr>
+                                        <tr>
                                             <td><img class="me-2" src="./img/class-avatar.jpg">Classe 75</td>
                                             <td class="text-center d-none d-md-table-cell">15 Feb 2021</td>
                                             <td class="text-center d-none d-md-table-cell">20%</td>
                                             <td class="text-center">
-                                                <div class="table-label d-inline-block bg-success text-white px-2 rounded-3">Done</div>
+                                                <div
+                                                    class="table-label d-inline-block bg-success text-white px-2 rounded-3">
+                                                    Done</div>
                                             </td>
                                             <td class="text-center">
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-trash"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -279,11 +293,15 @@
                                             <td class="text-center d-none d-md-table-cell">16 Feb 2021</td>
                                             <td class="text-center d-none d-md-table-cell">20%</td>
                                             <td class="text-center">
-                                                <div class="table-label d-inline-block bg-success text-white px-2 rounded-3">Done</div>
+                                                <div
+                                                    class="table-label d-inline-block bg-success text-white px-2 rounded-3">
+                                                    Done</div>
                                             </td>
                                             <td class="text-center">
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-trash"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -291,11 +309,15 @@
                                             <td class="text-center d-none d-md-table-cell">17 Feb 2021</td>
                                             <td class="text-center d-none d-md-table-cell">20%</td>
                                             <td class="text-center">
-                                                <div class="table-label d-inline-block bg-warning text-white px-2 rounded-3">process</div>
+                                                <div
+                                                    class="table-label d-inline-block bg-warning text-white px-2 rounded-3">
+                                                    process</div>
                                             </td>
                                             <td class="text-center">
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-trash"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -303,11 +325,15 @@
                                             <td class="text-center d-none d-md-table-cell">18 Feb 2021</td>
                                             <td class="text-center d-none d-md-table-cell">20%</td>
                                             <td class="text-center">
-                                                <div class="table-label d-inline-block bg-success text-white px-2 rounded-3">Done</div>
+                                                <div
+                                                    class="table-label d-inline-block bg-success text-white px-2 rounded-3">
+                                                    Done</div>
                                             </td>
                                             <td class="text-center">
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-trash"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -315,11 +341,15 @@
                                             <td class="text-center d-none d-md-table-cell">19 Feb 2021</td>
                                             <td class="text-center d-none d-md-table-cell">20%</td>
                                             <td class="text-center">
-                                                <div class="table-label d-inline-block bg-danger text-white px-2 rounded-3">failed</div>
+                                                <div
+                                                    class="table-label d-inline-block bg-danger text-white px-2 rounded-3">
+                                                    failed</div>
                                             </td>
                                             <td class="text-center">
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-trash"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -327,11 +357,15 @@
                                             <td class="text-center d-none d-md-table-cell">20 Feb 2021</td>
                                             <td class="text-center d-none d-md-table-cell">20%</td>
                                             <td class="text-center">
-                                                <div class="table-label d-inline-block bg-success text-white px-2 rounded-3">Done</div>
+                                                <div
+                                                    class="table-label d-inline-block bg-success text-white px-2 rounded-3">
+                                                    Done</div>
                                             </td>
                                             <td class="text-center">
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-trash"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -339,11 +373,15 @@
                                             <td class="text-center d-none d-md-table-cell">21 Feb 2021</td>
                                             <td class="text-center d-none d-md-table-cell">20%</td>
                                             <td class="text-center">
-                                                <div class="table-label d-inline-block bg-danger text-white px-2 rounded-3">failed</div>
+                                                <div
+                                                    class="table-label d-inline-block bg-danger text-white px-2 rounded-3">
+                                                    failed</div>
                                             </td>
                                             <td class="text-center">
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-trash"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -351,14 +389,18 @@
                                             <td class="text-center d-none d-md-table-cell">22 Feb 2021</td>
                                             <td class="text-center d-none d-md-table-cell">20%</td>
                                             <td class="text-center">
-                                                <div class="table-label d-inline-block bg-success text-white px-2 rounded-3">Done</div>
+                                                <div
+                                                    class="table-label d-inline-block bg-success text-white px-2 rounded-3">
+                                                    Done</div>
                                             </td>
                                             <td class="text-center">
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-pencil"></i></button>
-                                                <button type="button" class="btn btn-outline-secondary p-0"><i class="fa-solid fa-trash"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-pencil"></i></button>
+                                                <button type="button" class="btn btn-outline-secondary p-0"><i
+                                                        class="fa-solid fa-trash"></i></button>
                                             </td>
                                         </tr>
-                                  </table>
+                                </table>
                             </div>
                         </div>
                         <div class="card mb-3">
@@ -368,39 +410,51 @@
                             <div class="card-body">
                                 <div class="accordion accordion-flush" id="accordionFlushExample">
                                     <div class="accordion-item">
-                                      <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                          Come aggiungere un nuovo studente?
-                                        </button>
-                                      </h2>
-                                      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">Clicca sul "+" in alto nella sezione blu</div>
-                                      </div>
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                                aria-expanded="false" aria-controls="flush-collapseOne">
+                                                Come aggiungere un nuovo studente?
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Clicca sul "+" in alto nella sezione blu</div>
+                                        </div>
                                     </div>
                                     <div class="accordion-item">
-                                      <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                          Come posso accedere alle informazioni del mio account?
-                                        </button>
-                                      </h2>
-                                      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">Clicca sull'icona della campanella</div>
-                                      </div>
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                                aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                Come posso accedere alle informazioni del mio account?
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Clicca sull'icona della campanella</div>
+                                        </div>
                                     </div>
                                     <div class="accordion-item">
-                                      <h2 class="accordion-header">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                          Posso usare questa dashboard da mobile?
-                                        </button>
-                                      </h2>
-                                      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore aut illum alias hic, praesentium quasi libero, repudiandae eveniet debitis, mollitia iure at ipsum magni vel error magnam impedit corporis aliquam.</div>
-                                      </div>
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                                aria-expanded="false" aria-controls="flush-collapseThree">
+                                                Posso usare questa dashboard da mobile?
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                            data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur
+                                                adipisicing elit. Dolore aut illum alias hic, praesentium quasi libero,
+                                                repudiandae eveniet debitis, mollitia iure at ipsum magni vel error
+                                                magnam impedit corporis aliquam.</div>
+                                        </div>
                                     </div>
-                                  </div>
+                                </div>
                             </div>
                         </div>
-                    
+
                     </div>
 
                     <div class="col-12 col-lg-4">
@@ -432,19 +486,20 @@
                             <div class="card-body">
                                 <div class="card">
                                     <ul class="list-group list-group-flush">
-                                      <li class="list-group-item border-bottom-0">
-                                        <img class="img-fluid" src="./img/stats.jpeg" alt="grafico">
-                                      </li>
-                                      <li class="list-group-item">
-                                        <h5 class="card-title">Utenti Attivi</h5>
-                                        <p>Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
-                                      </li>
-                                      <li class="list-group-item">Gennaio: 1200</li>
-                                      <li class="list-group-item">Febbraio: 800</li>
-                                      <li class="list-group-item">Marzo: 1500</li>
-                                      <li class="list-group-item py-3"><a href="#">Visualizza report approfondito</a></li>
+                                        <li class="list-group-item border-bottom-0">
+                                            <img class="img-fluid" src="./img/stats.jpeg" alt="grafico">
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h5 class="card-title">Utenti Attivi</h5>
+                                            <p>Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                                        </li>
+                                        <li class="list-group-item">Gennaio: 1200</li>
+                                        <li class="list-group-item">Febbraio: 800</li>
+                                        <li class="list-group-item">Marzo: 1500</li>
+                                        <li class="list-group-item py-3"><a href="#">Visualizza report approfondito</a>
+                                        </li>
                                     </ul>
-                                  </div>
+                                </div>
                             </div>
                         </div>
 
